@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "transparent-maps-location-icon-road-icon-distance-icon-5fc812d7e7c491.0442749316069475439493.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
