@@ -14,8 +14,8 @@ struct LoadView: View {
     @State var from: String = ""
     @State var to: String = ""
     @State var price: Double
-    @State var hour: Double
-    @State var mileage: Double
+    @State var hour: Int
+    @State var mileage: Int
     
     var body: some View {
         VStack {
@@ -35,12 +35,13 @@ struct LoadView: View {
                     NameText3(text: price)
                     NameText(text: "Hours")
                         .padding(.trailing, 250)
-                    NameText4(text: hour)
+                    NameText4(text: Double(hour))
                     NameText(text: "Mileage")
                         .padding(.trailing, 250)
-                    NameText4(text: mileage)
+                    NameText4(text: Double(mileage))
                 }
             }
+            .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
             .padding()
             Button(action: { withAnimation{
                 self.alertIsVisible = true
@@ -55,7 +56,10 @@ struct LoadView: View {
             .background(Color.green)
             .cornerRadius(15.0)
             .alert(isPresented: $alertIsVisible, content: {
-                return Alert(title: Text("Load is added"), message: Text("Load number - \(loadNumber) has been added to your list"), dismissButton: .default(Text("Continue")))
+                return Alert(title: Text("Load is added"), message: Text("Load number - \(loadNumber) has been added to your list"), dismissButton: .default(Text("Continue"), action: {
+//                    HomeViewController()
+                })
+                )
             })
         }
         .offset(y: -40)

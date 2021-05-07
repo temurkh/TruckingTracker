@@ -7,6 +7,8 @@ target 'TruckingTracker' do
 
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Analytics'
 
   # Pods for TruckingTracker
 # add the Firebase pod for Google Analytics

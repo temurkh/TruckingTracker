@@ -6,79 +6,85 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct HomeViewController: View {
+    
     @State private var load = Load()
     @State private var profileIsShowing = false
     @State private var selectedLoadsIsShowing = false
     
     
     var body: some View {
-        
-            NavigationView {
-                List{
-                    Section(header: Text("This week")){
-    //                    ForEach(load.loadEntries.indices){ i in
-    //                        let loadEntry = load.loadEntries[i]
-    //                        RowView(load: load, loadNumber: loadEntry.loadNumber, from: loadEntry.from, to: loadEntry.to, price: loadEntry.price, hour: loadEntry.hour, mileage: loadEntry.mileage)
-    //                    }
-                    }
-                    Spacer()
-                    
-                    Section(header: Text("This month")){
-                        ForEach(load.loadEntries.indices){ i in
-                            let loadEntry = load.loadEntries[i]
-                            RowView(load: load, loadNumber: loadEntry.loadNumber, from: loadEntry.from, to: loadEntry.to, price: loadEntry.price, hour: loadEntry.hour, mileage: loadEntry.mileage)
-                        }
-                    }
+        NavigationView {
+            List{
+                Section(header: Text("This week").foregroundColor(.blue)){
+                    //                        ForEach(load.loadEntries.indices){ i in
+                    //                            let loadEntry = load.loadEntries[i]
+                    //                            RowView(load: load, loadNumber: loadEntry.loadNumber, from: loadEntry.from, to: loadEntry.to, price: loadEntry.price, hour: loadEntry.hour, mileage: loadEntry.mileage)
+                    //                        }
                 }
-                .padding([.leading, .trailing])
-//                .navigationTitle("Received Loads")
-//                .font(.title)
-                .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
-                .toolbar{
-                    ToolbarItem(placement:.navigationBarTrailing) {
-                        Button(action: {selectedLoadsIsShowing = true}, label: {
-                            HStack {
-                                Text(" Select")
-                                    .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
-                                    .padding(4)
-                                Image("completed")
-                                    .resizable()
-                                    .padding(6)
-                                    .frame(height: 44)
-                                    .frame(width: 44)
-                            }
-                            .background(Color("c"))
-                            .cornerRadius(10)
-                            .overlay(RoundedRectangle (cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2))
-
-                        }).sheet(isPresented: $selectedLoadsIsShowing, onDismiss: {}, content: {
-                            SelectedLoadView(selectedIsShowing: $selectedLoadsIsShowing)
-                        })
-                    }
-                    ToolbarItem(placement:.navigationBarLeading) {
-                        Button(action: {profileIsShowing = true}, label: {
-                            HStack {
-                                Image("profilepic")
-                                    .resizable()
-                                    .padding(6)
-                                    .frame(height: 44)
-                                    .frame(width: 44)
-                                Text("Profile ")
-                                    .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
-                                    .padding(6)
-                            }
-                            .background(Color("c"))
-                            .cornerRadius(10)
-                            .overlay(RoundedRectangle (cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2))
-                        }).sheet(isPresented: $profileIsShowing, onDismiss: {}, content: {
-                            ProfileView(profileIsShowing: $profileIsShowing)
-                        })
+                Spacer()
+                Section(header: Text("This month").foregroundColor(.blue)){
+                    ForEach(load.loadEntries.indices){ i in
+                        let loadEntry = load.loadEntries[i]
+                        RowView(load: load, loadNumber: loadEntry.loadNumber, from: loadEntry.from, to: loadEntry.to, price: loadEntry.price, hour: Double(loadEntry.hour), mileage: Double(loadEntry.mileage))
                     }
                 }
             }
-            .navigationBarHidden(true)
+            .padding([.leading, .trailing])
+            .navigationTitle("Received Loads")
+            .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
+            .toolbar{
+                ToolbarItem(placement:.navigationBarTrailing) {
+                    Button(action: {selectedLoadsIsShowing = true}, label: {
+                        HStack {
+                            Text(" Select")
+                                .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
+                                .padding(4)
+                            Image("completed")
+                                .resizable()
+                                .padding(6)
+                                .frame(height: 44)
+                                .frame(width: 44)
+                        }
+                        .background(Color("c"))
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle (cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2))
+                        
+                    }).sheet(isPresented: $selectedLoadsIsShowing, onDismiss: {}, content: {
+                        SelectedLoadView(selectedIsShowing: $selectedLoadsIsShowing)
+                    })
+                }
+                ToolbarItem(placement:.navigationBarLeading) {
+                    Button(action: {profileIsShowing = true}, label: {
+                        HStack {
+                            Image("profilepic")
+                                .resizable()
+                                .padding(6)
+                                .frame(height: 44)
+                                .frame(width: 44)
+                            Text("Profile ")
+                                .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
+                                .padding(6)
+                        }
+                        .background(Color("c"))
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle (cornerRadius: 10).strokeBorder(Color.gray, lineWidth: 2))
+                    }).sheet(isPresented: $profileIsShowing, onDismiss: {}, content: {
+                        ProfileView(profileIsShowing: $profileIsShowing)
+                    })
+                }
+            }
+        }
+        .navigationBarHidden(true)
+    }
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemTeal]
+        
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.init(hue: 0.685, saturation: 0.975, brightness: 0.287, alpha: 1)]
     }
 }
 
@@ -106,10 +112,11 @@ struct RowView: View {
             }
             Spacer()
             Text("→")
+                .font(.title)
             Spacer()
             NameText(text: self.to!)
             NavigationLink(
-                destination: LoadView(loadNumber: self.loadNumber!, from: self.from!, to: self.to!, price: self.price!, hour: self.hour!, mileage: self.mileage!),
+                destination: LoadView(loadNumber: self.loadNumber!, from: self.from!, to: self.to!, price: self.price!, hour: Int(self.hour!), mileage: Int(self.mileage!)),
                 label: {
                     Text("")
                 })

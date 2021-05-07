@@ -11,6 +11,10 @@ struct SelectedLoadView: View {
     
     @Binding var selectedIsShowing: Bool
     
+//    var totalHours: Double {
+//        return 0
+//    }
+    
     var body: some View {
         ZStack {
             Color("BackgroundColor").edgesIgnoringSafeArea(.all)
@@ -25,16 +29,20 @@ struct SelectedLoadView: View {
                 .padding(.top, 6)
                 SelectedList()
                     .navigationTitle("Selected Loads")
-                Text("Total price: ")
+                
+                Text("Total price: $\(SelectedList.selectedArray.map{($0.price ?? 0)}.reduce(0, +), specifier: "%.02f")")
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
-                Text("Total hours: ")
-                    //        Text("Total hours: \(totalHour!)")
+                Text("Total mileage: \(SelectedList.selectedArray.map{($0.mileage ?? 0)}.reduce(0, +))")
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
-                Text("Total mileage: ")
+                Text("Total hours: \(SelectedList.selectedArray.map{($0.hour ?? 0)}.reduce(0, +))")
+                    .fontWeight(.black)
+                    .kerning(0.5)
+                    .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
+                Text("Total loads: \(SelectedList.selectedArray.count)")
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
@@ -49,10 +57,10 @@ struct selectedLoadEntry: Identifiable, Hashable {
     var from: String?
     var to: String?
     var price: Double?
-    var hour: Double?
-    var mileage: Double?
-    
+    var hour: Int?
+    var mileage: Int?
 }
+
 
 struct SelectedList: View {
     

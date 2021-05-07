@@ -11,9 +11,9 @@ struct LoadEntry {
     let loadNumber: String
     let from: String
     let to: String
-    let hour: Double
+    let hour: Int
     let price: Double
-    let mileage: Double
+    let mileage: Int
 
 }
 
