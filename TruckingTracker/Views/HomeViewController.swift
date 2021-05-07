@@ -84,7 +84,7 @@ struct HomeViewController: View {
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemTeal]
         
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.init(hue: 0.685, saturation: 0.975, brightness: 0.287, alpha: 1)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.systemTeal]
     }
 }
 

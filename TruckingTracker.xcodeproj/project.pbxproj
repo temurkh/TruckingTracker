@@ -11,7 +11,6 @@
 		73099B8F262F206E00945673 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B8E262F206E00945673 /* Helper.swift */; };
 		73099B92262F223400945673 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B91262F223400945673 /* ViewRouter.swift */; };
 		735F083F263DDB3500405733 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F083E263DDB3500405733 /* AuthenticationService.swift */; };
-		735F0899263F1E5400405733 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F0898263F1E5400405733 /* BackgroundView.swift */; };
 		73F7A4B6261AC92F001A86B1 /* TruckingTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4B5261AC92F001A86B1 /* TruckingTrackerApp.swift */; };
 		73F7A4B8261AC92F001A86B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4B7261AC92F001A86B1 /* ContentView.swift */; };
 		73F7A4BA261AC92F001A86B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F7A4B9261AC92F001A86B1 /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 		73099B8E262F206E00945673 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		73099B91262F223400945673 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		735F083E263DDB3500405733 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
-		735F0898263F1E5400405733 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		73F7A4B2261AC92F001A86B1 /* TruckingTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckingTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F7A4B5261AC92F001A86B1 /* TruckingTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckingTrackerApp.swift; sourceTree = "<group>"; };
 		73F7A4B7261AC92F001A86B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 				73F7A504262A0F02001A86B1 /* SelectedLoadView.swift */,
 				73F7A507262AF05F001A86B1 /* ProfileView.swift */,
 				73099B8B262F201000945673 /* MotherView.swift */,
-				735F0898263F1E5400405733 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,7 +287,6 @@
 				73F7A4C6261ACA36001A86B1 /* StartViewController.swift in Sources */,
 				73F7A4DC2620DDD4001A86B1 /* TextViews.swift in Sources */,
 				735F083F263DDB3500405733 /* AuthenticationService.swift in Sources */,
-				735F0899263F1E5400405733 /* BackgroundView.swift in Sources */,
 				73F7A4D82620DAD5001A86B1 /* Load.swift in Sources */,
 				73F7A4CF261DFA1C001A86B1 /* HomeViewController.swift in Sources */,
 				73099B8F262F206E00945673 /* Helper.swift in Sources */,

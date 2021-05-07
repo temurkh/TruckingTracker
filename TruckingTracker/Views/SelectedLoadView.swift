@@ -11,10 +11,6 @@ struct SelectedLoadView: View {
     
     @Binding var selectedIsShowing: Bool
     
-//    var totalHours: Double {
-//        return 0
-//    }
-    
     var body: some View {
         ZStack {
             Color("BackgroundColor").edgesIgnoringSafeArea(.all)
@@ -31,18 +27,22 @@ struct SelectedLoadView: View {
                     .navigationTitle("Selected Loads")
                 
                 Text("Total price: $\(SelectedList.selectedArray.map{($0.price ?? 0)}.reduce(0, +), specifier: "%.02f")")
+                    .font(.title2)
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
                 Text("Total mileage: \(SelectedList.selectedArray.map{($0.mileage ?? 0)}.reduce(0, +))")
+                    .font(.title2)
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
                 Text("Total hours: \(SelectedList.selectedArray.map{($0.hour ?? 0)}.reduce(0, +))")
+                    .font(.title2)
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
                 Text("Total loads: \(SelectedList.selectedArray.count)")
+                    .font(.title2)
                     .fontWeight(.black)
                     .kerning(0.5)
                     .foregroundColor(Color(hue: 0.685, saturation: 0.975, brightness: 0.287))
@@ -84,7 +84,7 @@ struct SelectedList: View {
                                     .fontWeight(.black)
                                 Text(i.to!)
                                     .fontWeight(.black)
-
+                                
                             }
                             Spacer()
                             VStack {
@@ -97,7 +97,7 @@ struct SelectedList: View {
                                     .fontWeight(.black)
                                 Text("$\(i.price!, specifier: "%.02f")")
                                     .fontWeight(.black)
-
+                                
                             }
                         }
                     }
@@ -108,19 +108,6 @@ struct SelectedList: View {
         }
     }
 }
-
-//func calculateHour(){
-//
-//    var totalHour = Double()
-//
-//    for hour in SelectedList.selectedArray{
-//         return totalHour += hour
-//    }
-//
-//    //        ForEach(SelectedList.selectedArray) { i in
-//    //            totalHour +=
-//    //        }
-//}
 
 struct SelectedLoadView_Previews: PreviewProvider {
     static private var selectedIsShowing = Binding.constant(false)
