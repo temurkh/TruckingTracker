@@ -11,6 +11,8 @@
 		73099B8F262F206E00945673 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B8E262F206E00945673 /* Helper.swift */; };
 		73099B92262F223400945673 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B91262F223400945673 /* ViewRouter.swift */; };
 		735F083F263DDB3500405733 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F083E263DDB3500405733 /* AuthenticationService.swift */; };
+		73B95AC7264A3B520022DD72 /* LoadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B95AC6264A3B510022DD72 /* LoadsViewModel.swift */; };
+		73B95ACA264B1ACF0022DD72 /* Loadd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B95AC9264B1ACF0022DD72 /* Loadd.swift */; };
 		73F7A4B6261AC92F001A86B1 /* TruckingTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4B5261AC92F001A86B1 /* TruckingTrackerApp.swift */; };
 		73F7A4B8261AC92F001A86B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4B7261AC92F001A86B1 /* ContentView.swift */; };
 		73F7A4BA261AC92F001A86B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F7A4B9261AC92F001A86B1 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		73099B8E262F206E00945673 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		73099B91262F223400945673 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		735F083E263DDB3500405733 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		73B95AC6264A3B510022DD72 /* LoadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadsViewModel.swift; sourceTree = "<group>"; };
+		73B95AC9264B1ACF0022DD72 /* Loadd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadd.swift; sourceTree = "<group>"; };
 		73F7A4B2261AC92F001A86B1 /* TruckingTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckingTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F7A4B5261AC92F001A86B1 /* TruckingTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckingTrackerApp.swift; sourceTree = "<group>"; };
 		73F7A4B7261AC92F001A86B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		73B95AC5264A3B230022DD72 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				73B95AC6264A3B510022DD72 /* LoadsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		73F7A4A9261AC92F001A86B1 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,7 @@
 		73F7A4B4261AC92F001A86B1 /* TruckingTracker */ = {
 			isa = PBXGroup;
 			children = (
+				73B95AC5264A3B230022DD72 /* ViewModels */,
 				735F083D263DDAF400405733 /* Services */,
 				73F7A4E926276792001A86B1 /* GoogleService-Info.plist */,
 				73F7A4D62620DABF001A86B1 /* Models */,
@@ -141,6 +154,7 @@
 				73F7A4D72620DAD4001A86B1 /* Load.swift */,
 				73099B8E262F206E00945673 /* Helper.swift */,
 				73099B91262F223400945673 /* ViewRouter.swift */,
+				73B95AC9264B1ACF0022DD72 /* Loadd.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +305,8 @@
 				73F7A4CF261DFA1C001A86B1 /* HomeViewController.swift in Sources */,
 				73099B8F262F206E00945673 /* Helper.swift in Sources */,
 				73F7A508262AF05F001A86B1 /* ProfileView.swift in Sources */,
+				73B95ACA264B1ACF0022DD72 /* Loadd.swift in Sources */,
+				73B95AC7264A3B520022DD72 /* LoadsViewModel.swift in Sources */,
 				73F7A505262A0F02001A86B1 /* SelectedLoadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

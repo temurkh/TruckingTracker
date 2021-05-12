@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct ProfileView: View {
+    
+    let database = Firestore.firestore() //not finished here
     
     @Binding var profileIsShowing: Bool
     @State var driverName: String = ""
