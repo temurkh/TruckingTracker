@@ -10,9 +10,9 @@
 		73099B8C262F201000945673 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B8B262F201000945673 /* MotherView.swift */; };
 		73099B8F262F206E00945673 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B8E262F206E00945673 /* Helper.swift */; };
 		73099B92262F223400945673 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73099B91262F223400945673 /* ViewRouter.swift */; };
+		730E3E12264BA26C00D72D96 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E3E11264BA26C00D72D96 /* Trip.swift */; };
 		735F083F263DDB3500405733 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735F083E263DDB3500405733 /* AuthenticationService.swift */; };
 		73B95AC7264A3B520022DD72 /* LoadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B95AC6264A3B510022DD72 /* LoadsViewModel.swift */; };
-		73B95ACA264B1ACF0022DD72 /* Loadd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B95AC9264B1ACF0022DD72 /* Loadd.swift */; };
 		73F7A4B6261AC92F001A86B1 /* TruckingTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4B5261AC92F001A86B1 /* TruckingTrackerApp.swift */; };
 		73F7A4B8261AC92F001A86B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4B7261AC92F001A86B1 /* ContentView.swift */; };
 		73F7A4BA261AC92F001A86B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F7A4B9261AC92F001A86B1 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 		73F7A4CC261DEBDB001A86B1 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4CB261DEBDB001A86B1 /* SignupViewController.swift */; };
 		73F7A4CF261DFA1C001A86B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4CE261DFA1C001A86B1 /* HomeViewController.swift */; };
 		73F7A4D2261F8751001A86B1 /* semitruck.png in Resources */ = {isa = PBXBuildFile; fileRef = 73F7A4D1261F8751001A86B1 /* semitruck.png */; };
-		73F7A4D82620DAD5001A86B1 /* Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4D72620DAD4001A86B1 /* Load.swift */; };
+		73F7A4D82620DAD5001A86B1 /* SampleLoadsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4D72620DAD4001A86B1 /* SampleLoadsCollection.swift */; };
 		73F7A4DC2620DDD4001A86B1 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4DB2620DDD4001A86B1 /* TextViews.swift */; };
 		73F7A4DF2620E131001A86B1 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F7A4DE2620E131001A86B1 /* LoadView.swift */; };
 		73F7A4EA26276792001A86B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73F7A4E926276792001A86B1 /* GoogleService-Info.plist */; };
@@ -38,9 +38,9 @@
 		73099B8B262F201000945673 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		73099B8E262F206E00945673 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		73099B91262F223400945673 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		730E3E11264BA26C00D72D96 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		735F083E263DDB3500405733 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		73B95AC6264A3B510022DD72 /* LoadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadsViewModel.swift; sourceTree = "<group>"; };
-		73B95AC9264B1ACF0022DD72 /* Loadd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadd.swift; sourceTree = "<group>"; };
 		73F7A4B2261AC92F001A86B1 /* TruckingTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckingTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F7A4B5261AC92F001A86B1 /* TruckingTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckingTrackerApp.swift; sourceTree = "<group>"; };
 		73F7A4B7261AC92F001A86B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		73F7A4CB261DEBDB001A86B1 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		73F7A4CE261DFA1C001A86B1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		73F7A4D1261F8751001A86B1 /* semitruck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semitruck.png; sourceTree = "<group>"; };
-		73F7A4D72620DAD4001A86B1 /* Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Load.swift; sourceTree = "<group>"; };
+		73F7A4D72620DAD4001A86B1 /* SampleLoadsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleLoadsCollection.swift; sourceTree = "<group>"; };
 		73F7A4DB2620DDD4001A86B1 /* TextViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViews.swift; path = TruckingTracker/TextViews.swift; sourceTree = SOURCE_ROOT; };
 		73F7A4DE2620E131001A86B1 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		73F7A4E926276792001A86B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -151,10 +151,10 @@
 		73F7A4D62620DABF001A86B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				73F7A4D72620DAD4001A86B1 /* Load.swift */,
+				73F7A4D72620DAD4001A86B1 /* SampleLoadsCollection.swift */,
 				73099B8E262F206E00945673 /* Helper.swift */,
 				73099B91262F223400945673 /* ViewRouter.swift */,
-				73B95AC9264B1ACF0022DD72 /* Loadd.swift */,
+				730E3E11264BA26C00D72D96 /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,12 +301,12 @@
 				73F7A4C6261ACA36001A86B1 /* StartViewController.swift in Sources */,
 				73F7A4DC2620DDD4001A86B1 /* TextViews.swift in Sources */,
 				735F083F263DDB3500405733 /* AuthenticationService.swift in Sources */,
-				73F7A4D82620DAD5001A86B1 /* Load.swift in Sources */,
+				73F7A4D82620DAD5001A86B1 /* SampleLoadsCollection.swift in Sources */,
 				73F7A4CF261DFA1C001A86B1 /* HomeViewController.swift in Sources */,
 				73099B8F262F206E00945673 /* Helper.swift in Sources */,
 				73F7A508262AF05F001A86B1 /* ProfileView.swift in Sources */,
-				73B95ACA264B1ACF0022DD72 /* Loadd.swift in Sources */,
 				73B95AC7264A3B520022DD72 /* LoadsViewModel.swift in Sources */,
+				730E3E12264BA26C00D72D96 /* Trip.swift in Sources */,
 				73F7A505262A0F02001A86B1 /* SelectedLoadView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

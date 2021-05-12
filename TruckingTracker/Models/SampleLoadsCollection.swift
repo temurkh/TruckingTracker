@@ -9,7 +9,9 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-struct LoadEntry {
+struct LoadEntry: Identifiable {
+    var id: String = UUID().uuidString
+    
     let loadNumber: String
     let from: String
     let to: String
@@ -18,17 +20,7 @@ struct LoadEntry {
     let mileage: Int
 }
 
-//struct Load: Identifiable{
-//    var id: String = UUID().uuidString
-//    var loadNumber: String
-//    var from: String
-//    var to: String
-//    var hour: Int
-//    var price: Double
-//    var mileage: Int
-//}
-
-struct Load: Identifiable {
+struct SampleLoadsCollection: Identifiable {
     var id: String = UUID().uuidString
     var loadEntries: [LoadEntry] = []
 
